@@ -28,3 +28,5 @@ node_modules/
 .next
 out
 vite.config.*.timestamp*
+
+dist/
