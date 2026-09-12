@@ -3,4 +3,5 @@ allowBuilds:
   nx: true
   sharp: true
   unrs-resolver: true
+  esbuild: false
 minimumReleaseAge: 1440
