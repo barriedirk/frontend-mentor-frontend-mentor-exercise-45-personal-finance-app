@@ -20,3 +20,6 @@ figma/
 .nx/cache
 .nx/workspace-data
 .nx/migrate-runs
+
+node_modules/
+**/node_modules/
