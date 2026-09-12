@@ -19,10 +19,16 @@
   "type": "module",
   "devDependencies": {
     "@nx/js": "23.2.1",
+    "@nx/next": "^23.2.1",
+    "@nx/react": "23.2.1",
     "@swc/helpers": "~0.5.18",
     "nx": "23.2.1",
     "typescript": "~6.0.3"
   },
   "nx": {},
-  "dependencies": {}
+  "dependencies": {
+    "next": "~16.1.6",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0"
+  }
 }

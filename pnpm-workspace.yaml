@@ -1,3 +1,4 @@
 allowBuilds:
   nx: true
+  sharp: true
 minimumReleaseAge: 1440
