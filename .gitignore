@@ -30,3 +30,5 @@ out
 vite.config.*.timestamp*
 
 dist/
+
+*.log

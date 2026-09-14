@@ -3,6 +3,11 @@
   "compilerOptions": {
     "jsx": "preserve",
     "strict": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+    "ignoreDeprecations": "6.0",
     "noEmit": true,
     "emitDeclarationOnly": false,
     "esModuleInterop": true,
@@ -22,12 +27,18 @@
     "**/*.tsx",
     "**/*.js",
     "**/*.jsx",
-    
-      "../../apps/container/.next/types/**/*.ts",
-      "../../dist/apps/container/.next/types/**/*.ts",
-    
+
+    "../../apps/container/.next/types/**/*.ts",
+    "../../dist/apps/container/.next/types/**/*.ts",
+
     "index.d.ts",
     "next-env.d.ts"
   ],
-  "exclude": ["node_modules", "jest.config.ts", "jest.config.cts", "**/*.spec.ts", "**/*.test.ts"]
+  "exclude": [
+    "node_modules",
+    "jest.config.ts",
+    "jest.config.cts",
+    "**/*.spec.ts",
+    "**/*.test.ts"
+  ]
 }
