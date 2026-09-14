@@ -1,28 +1,43 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-import { nxViteTsPaths } from '@nx/vite/plugins/nx-tsconfig-paths.plugin';
-import { nxCopyAssetsPlugin } from '@nx/vite/plugins/nx-copy-assets.plugin';
-import { federation } from '@module-federation/vite';
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import { nxViteTsPaths } from "@nx/vite/plugins/nx-tsconfig-paths.plugin";
+import { nxCopyAssetsPlugin } from "@nx/vite/plugins/nx-copy-assets.plugin";
+import { federation } from "@module-federation/vite";
 
 export default defineConfig(() => ({
   root: import.meta.dirname,
-  cacheDir: '../../node_modules/.vite/apps/overview',
-  server:{
+  cacheDir: "../../node_modules/.vite/apps/overview",
+  server: {
     port: 4200,
-    host: 'localhost',
+    host: "localhost",
   },
-  preview:{
+  preview: {
     port: 4300,
-    host: 'localhost',
+    host: "localhost",
   },
   plugins: [
     react(),
     nxViteTsPaths(),
-    nxCopyAssetsPlugin(['*.md']),
+    nxCopyAssetsPlugin(["*.md"]),
     federation({
-      name: 'overview',
+      name: "overview",
+      filename: "remoteEntry.js",
       exposes: {
-        './App': './src/app/app.tsx',
+        "./App": "./src/app/app.tsx",
+      },
+      shared: {
+        react: {
+          singleton: true,
+        },
+        "react/": {
+          singleton: true,
+        },
+        "react-router": {
+          singleton: true,
+        },
+        "react-router-dom": {
+          singleton: true,
+        },
       },
     }),
   ],
@@ -31,7 +46,7 @@ export default defineConfig(() => ({
   //   plugins: () => [ nxViteTsPaths() ],
   // },
   build: {
-    outDir: '../../dist/apps/overview',
+    outDir: "../../dist/apps/overview",
     emptyOutDir: true,
     reportCompressedSize: true,
     commonjsOptions: {

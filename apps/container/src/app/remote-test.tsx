@@ -1,14 +1,16 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { loadRemote } from "@module-federation/enhanced/runtime";
-import '@/lib/module-federation';
+import { BrowserRouter } from "react-router-dom";
+
+import { mf } from "@/lib/module-federation";
 
 export default function RemoteTest() {
-  const [RemoteApp, setRemoteApp] = useState<React.ComponentType | null>(null);
+  const [RemoteApp, setRemoteApp] =
+    useState<React.ComponentType | null>(null);
 
   useEffect(() => {
-    loadRemote("overview/App")
+    mf.loadRemote("overview/App")
       .then((module) => {
         const remoteModule = module as {
           default: React.ComponentType;
@@ -25,5 +27,9 @@ export default function RemoteTest() {
     return <p>Loading overview...</p>;
   }
 
-  return <RemoteApp />;
+  return (
+    <BrowserRouter>
+      <RemoteApp />
+    </BrowserRouter>
+  );
 }
