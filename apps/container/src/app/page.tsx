@@ -1,10 +1,8 @@
-import RemoteTest from './remote-test';
-
 export default function Home() {
   return (
     <main>
-      <h1>Container</h1>
-      <RemoteTest />
+      <h1>Personal Finance App</h1>
+      <p>Container</p>
     </main>
   );
 }

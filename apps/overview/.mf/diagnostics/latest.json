@@ -1,0 +1,10 @@
+{
+  "latestErrorEvent": {
+    "code": "TYPE-001",
+    "message": "Failed to generate type declaration. Execute the below cmd to reproduce and fix the error. #TYPE-001\nargs: {\"cmd\":\"/Users/dthm/.local/share/fnm/node-versions/v24.12.0/installation/bin/node /Users/dthm/Code/frontend-mentor/frontend-mentor-exercise-45-personal-finance-app/node_modules/.pnpm/typescript@6.0.3/node_modules/typescript/bin/tsc --project /Users/dthm/Code/frontend-mentor/frontend-mentor-exercise-45-personal-finance-app/apps/overview/node_modules/.federation/tsconfig.41e6a1ddc5720f8411f9d2a5991c92c9.json\"}\nView the docs to see how to solve: https://module-federation.io/guide/troubleshooting/type#type-001",
+    "args": {
+      "cmd": "/Users/dthm/.local/share/fnm/node-versions/v24.12.0/installation/bin/node /Users/dthm/Code/frontend-mentor/frontend-mentor-exercise-45-personal-finance-app/node_modules/.pnpm/typescript@6.0.3/node_modules/typescript/bin/tsc --project /Users/dthm/Code/frontend-mentor/frontend-mentor-exercise-45-personal-finance-app/apps/overview/node_modules/.federation/tsconfig.41e6a1ddc5720f8411f9d2a5991c92c9.json"
+    },
+    "timestamp": 1790303044527
+  }
+}

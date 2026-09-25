@@ -32,3 +32,6 @@ vite.config.*.timestamp*
 dist/
 
 *.log
+
+
+readme-nx.md
