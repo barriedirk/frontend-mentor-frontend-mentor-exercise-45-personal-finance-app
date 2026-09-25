@@ -1,14 +1,12 @@
 'use client';
 
-import RemoteTest from '../remote-test';
-
-import styles from './page.module.css';
+import RemoteLoader from '@/components/RemoteLoader';
 
 export default function Page() {
   return (
     <main>
       <h1>Overview</h1>
-      <RemoteTest />
+      <RemoteLoader remote="overview/App" />
     </main>
   );
 }
