@@ -1,3 +1,5 @@
+import '@vitejs/plugin-react/preamble';
+
 export function App() {
   return (
     <div>

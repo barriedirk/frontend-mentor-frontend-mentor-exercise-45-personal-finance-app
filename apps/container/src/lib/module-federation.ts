@@ -11,6 +11,11 @@ export const mf = createInstance({
       entry: "http://localhost:4200/remoteEntry.js",
       type: "module",
     },
+    {
+      name: "transactions",
+      entry: "http://localhost:4201/remoteEntry.js",
+      type: "module",
+    },
   ],
 });
 
